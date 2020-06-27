@@ -5,5 +5,31 @@ c = conn.cursor()
 tables = c.execute()
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 conn.commit()
 conn.close()
