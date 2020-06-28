@@ -16,33 +16,113 @@ for i in range(0,len(tables1)):
     tables.append(tables1[i][0])
     i += 1
 
-if "favourites" not in tables:
-    print("Create the table 'favourites'")
-    c.execute("CREATE TABLE favourites (ContactID int);")
+if "Favourites" not in tables:
+    print("Create the table 'Favourites'")
+    c.execute("CREATE TABLE Favourites (ContactID int);")
 else:
-    print("The table 'favourites' already made")
+    print("The table 'Favourites' already made")
 
-if "contacts" not in tables:
-    print("Create the table 'contacts'")
-    c.execute("CREATE TABLE contacts ("
+if "Contacts" not in tables:
+    print("Create the table 'Contacts'")
+    c.execute("CREATE TABLE Contacts ("
               "ContactID int, "
-              "nickname varchar(50), "
-              "surname varchar(20), "
-              "name varchar(20), "
-              "otchestvo varchar(20), "
-              "comment varchar(300), "
-              "listNumberIDs varchar, "
-              "listAdresIDs varchar"
+              "NickName varchar(50), "
+              "SurName varchar(20), "
+              "Name varchar(20), "
+              "Patronymic varchar(20), "
+              "Comment varchar(300), "
+              "ListPhoneNumberIDs varchar, "
+              "ListAddressIDs varchar"
               ");")
 else:
     print("The table 'contacts' already made")
 
 
+if "PhoneNumbers" not in tables:
+    print("Create the table 'PhoneNumbers'")
+    c.execute("CREATE TABLE PhoneNumbers ("
+              "PhoneNumID int, "
+              "PhoneTagID int, "
+              "Country int, "
+              "Operator int, "
+              "Number int, "
+              "ContactID int"
+              ");")
+else:
+    print("The table 'PhoneNumbers' already made")
 
+if "phonetags" not in tables:
+    print("Create the table 'phonetags'")
+    c.execute("CREATE TABLE phonetags ("
+              "PhoneTagID int, "
+              "PhoneTag varchar(20) "
+              ");")
+else:
+    print("The table 'phonetags' already made")
 
+if "strtypes" not in tables:
+    print("Create the table 'strtypes'")
+    c.execute("CREATE TABLE strtypes ("
+              "strtypeID int, "
+              "strtype varchar(20) "
+              ");")
+else:
+    print("The table 'strtypes' already made")
 
+if "countries" not in tables:
+    print("Create the table 'countries'")
+    c.execute("CREATE TABLE countries ("
+              "countryID int, "
+              "country varchar(20) "
+              ");")
+else:
+    print("The table 'countries' already made")
 
+if "cities" not in tables:
+    print("Create the table 'cities'")
+    c.execute("CREATE TABLE cities ("
+              "cityID int, "
+              "city varchar(20) "
+              ");")
+else:
+    print("The table 'cities' already made")
 
+if "housetypes" not in tables:
+    print("Create the table 'housetypes'")
+    c.execute("CREATE TABLE housetypes ("
+              "housetypeID int, "
+              "housetype varchar(20) "
+              ");")
+else:
+    print("The table 'housetypes' already made")
+
+if "street" not in tables:
+    print("Create the table 'street'")
+    c.execute("CREATE TABLE street ("
+              "streetID int, "
+              "street varchar(20) "
+              ");")
+else:
+    print("The table 'street' already made")
+
+if "addresses" not in tables:
+    print("Create the table 'addresses'")
+    c.execute("CREATE TABLE addresses ("
+              "addressID int, "
+              "index int, "
+              "countryID int, "
+              "cityID int, "
+              "strtypeID int, "
+              "streetID int,"
+              "housenum int,"
+              "housetypeID int,"
+              "doorsnum int,"
+              "doorcode varchar(10),"
+              "floor int,"
+              "flat int"
+              ");")
+else:
+    print("The table 'addresses' already made")
 
 
 
